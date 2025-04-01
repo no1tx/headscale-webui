@@ -157,7 +157,7 @@ def get_api_key_info(url, api_key):
     )
     json_response = response.json()
     # Find the current key in the array:  
-    key_prefix = str(api_key[0:10])
+    key_prefix = str(api_key[0:7])
     app.logger.info("Looking for valid API Key...")
     for key in json_response["apiKeys"]:
         if key_prefix == key["prefix"]:
