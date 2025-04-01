@@ -79,7 +79,7 @@ def test_api_key(url, api_key):
 
 # Expires an API key
 def expire_key(url, api_key):
-    payload = {'prefix':str(api_key[0:10])}
+    payload = {'prefix':str(api_key[0:7])}
     json_payload=json.dumps(payload)
     app.logger.debug("Sending the payload '"+str(json_payload)+"' to the headscale server")
 
